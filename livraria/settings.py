@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "media",
     "core",
     "rest_framework_simplejwt",
     "corsheaders",
@@ -92,6 +93,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 REST_FRAMEWORK = {
@@ -104,3 +106,11 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = "core.Usuario"
+
+MEDIA_URL = "http://localhost:8000/media/"
+
+MEDIA_ENDPOINT = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media_files/")
+
+FILE_UPLOAD_PERMISSIONS = 0o640
