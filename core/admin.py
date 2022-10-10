@@ -26,5 +26,3 @@ class UsuarioAdmin(UserAdmin):
         ),
         (_("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
-
-admin.site.register(Usuario, UsuarioAdmin)
