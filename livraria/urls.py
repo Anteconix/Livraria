@@ -14,7 +14,6 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
-
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
