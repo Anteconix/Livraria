@@ -4,7 +4,6 @@ from core.models import Livro
 from media.models import Image
 from media.serializers import ImageSerializer
 
-
 class LivroSerializer(ModelSerializer):
     capa_attachment_key = SlugRelatedField(
         source="capa",
