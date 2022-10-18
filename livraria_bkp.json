@@ -1,0 +1,30 @@
+[
+{
+  "model": "core.categoria",
+  "pk": 1,
+  "fields": {
+    "descricao": "Desenvolvimento Web"
+  }
+},
+{
+  "model": "core.usuario",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$Sxk920mAYVwaiChVIEqKNJ$X8LGTOj57zCoOuPkKRdzAI6drpERQMuu6Xeb86UthfM=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-03T11:57:42.782Z",
+    "cpf": "",
+    "telefone": null,
+    "data_nascimento": null,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
