@@ -1,7 +1,15 @@
+import environ
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+environ.Env.read_env((os.path.join(BASE_DIR, '.env')))
+SECRET_KEY = env('SECRET_KEY')
+DEBUG = env('DEBUG')
+ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(',')
+DATABASES = {'default': env.db()}
 
 SECRET_KEY = "django-insecure-svwd1#a+hes8us=*u3s@h*e25b79=9cwv!!-fp%^qk_k39h-1m"
 
@@ -56,13 +64,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "livraria.wsgi.application"
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
