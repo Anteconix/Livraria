@@ -11,12 +11,6 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(',')
 DATABASES = {'default': env.db()}
 
-SECRET_KEY = "django-insecure-svwd1#a+hes8us=*u3s@h*e25b79=9cwv!!-fp%^qk_k39h-1m"
-
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
